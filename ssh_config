@@ -1,0 +1,16 @@
+host caen
+HostName oncampus-course.engin.umich.edu
+User hdakov
+ControlMaster auto
+ControlPath ~/.ssh/sockets/_%r@%h:%p
+ControlPersist 43200 
+
+host caen-off
+HostName login-course-2fa.engin.umich.edu
+User hdakov
+
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+
